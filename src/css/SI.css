@@ -6,11 +6,17 @@
     box-sizing: border-box;
 }
 .main{
-  background-image: url(https://images.everydayhealth.com/images/coping-with-depression-a-guide-to-good-treatment-1440x810.jpg);
   background-repeat: no-repeat;
  background-size: cover;
 }
+
+.App-header{
+    background-image: url(https://images.everydayhealth.com/images/coping-with-depression-a-guide-to-good-treatment-1440x810.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
 form{
+    
   margin-left: 0px;
   height: 520px;
     width: 400px;
