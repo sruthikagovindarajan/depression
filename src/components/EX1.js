@@ -1,0 +1,155 @@
+return (
+    <div className="Apps">
+        <EX
+            qn={qs[1].qn}
+            o1={qs[1].o1}
+            o2={qs[1].o2}
+            o3={qs[1].o3}
+            o4={qs[1].o4}
+            o5={qs[1].o5}
+        ></EX>
+        <EX
+            qn={qs[2].qn}
+            o1={qs[2].o1}
+            o2={qs[2].o2}
+            o3={qs[2].o3}
+            o4={qs[2].o4}
+            o5={qs[2].o5}
+        ></EX>
+        <EX
+            qn={qs[3].qn}
+            o1={qs[3].o1}
+            o2={qs[3].o2}
+            o3={qs[3].o3}
+            o4={qs[3].o4}
+            o5={qs[3].o5}
+        ></EX>
+        <EX
+            qn={qs[4].qn}
+            o1={qs[4].o1}
+            o2={qs[4].o2}
+            o3={qs[4].o3}
+        ></EX>
+        <EX
+            qn={qs[5].qn}
+            o1={qs[5].o1}
+            o2={qs[5].o2}
+            o3={qs[5].o3}
+        ></EX>
+        <EX
+            qn={qs[6].qn}
+            o1={qs[6].o1}
+            o2={qs[6].o2}
+            o3={qs[6].o3}
+        ></EX>
+        <EX
+            qn={qs[7].qn}
+            o1={qs[7].o1}
+            o2={qs[7].o2}
+            o3={qs[7].o3}
+            o4={qs[7].o4}
+            o5={qs[7].o5}
+        ></EX>
+        <EX
+            qn={qs[8].qn}
+            o1={qs[8].o1}
+            o2={qs[8].o2}
+            o3={qs[8].o3}
+            o4={qs[8].o4}
+            o5={qs[8].o5}
+        ></EX>
+        <EX
+            qn={qs[9].qn}
+            o1={qs[9].o1}
+            o2={qs[9].o2}
+            o3={qs[9].o3}
+            o4={qs[9].o4}
+            o5={qs[9].o5}
+        ></EX>
+        <EX
+            qn={qs[10].qn}
+            o1={qs[10].o1}
+            o2={qs[10].o2}
+            o3={qs[10].o3}
+            o4={qs[10].o4}
+            o5={qs[10].o5}
+        ></EX>
+        <EX
+            qn={qs[11].qn}
+            o1={qs[11].o1}
+            o2={qs[11].o2}
+            o3={qs[11].o3}
+            o4={qs[11].o4}
+            o5={qs[11].o5}
+        ></EX>
+        <EX
+            qn={qs[12].qn}
+            o1={qs[12].o1}
+            o2={qs[12].o2}
+        ></EX>
+        <EX
+            qn={qs[13].qn}
+            o1={qs[13].o1}
+            o2={qs[13].o2}
+            o3={qs[13].o3}
+        ></EX>
+        <EX
+            qn={qs[14].qn}
+            o1={qs[14].o1}
+            o2={qs[14].o2}
+            o3={qs[14].o3}
+        ></EX>
+        <EX
+            qn={qs[15].qn}
+            o1={qs[15].o1}
+            o2={qs[15].o2}
+            o3={qs[15].o3}
+            o4={qs[15].o4}
+            o5={qs[15].o5}
+        ></EX>
+        <EX
+            qn={qs[16].qn}
+            o1={qs[16].o1}
+            o2={qs[16].o2}
+            o3={qs[16].o3}
+            o4={qs[16].o4}
+        ></EX>
+        <EX
+            qn={qs[17].qn}
+            o1={qs[17].o1}
+            o2={qs[17].o2}
+            o3={qs[17].o3}
+            o4={qs[17].o4}
+        ></EX>
+        <EX
+            qn={qs[18].qn}
+            o1={qs[18].o1}
+            o2={qs[18].o2}
+        ></EX>
+        <header className="App-header">
+            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <EX
+            qn={qs[0].qn}
+            o1={qs[0].o1}
+            o2={qs[0].o2}
+            o3={qs[0].o3}
+            o4={qs[0].o4}
+            o5={qs[0].o5}
+        ></EX>
+       
+                    </div>
+                </div>
+                <div class="carousel-item">
+                </div>
+                <div class="carousel-item">
+                </div>
+                <div class="carousel-item">
+                </div>
+            </div>
+        </header >
+    </div >
+);
+}
+export default Hamilton;
