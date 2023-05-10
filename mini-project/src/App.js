@@ -3,10 +3,10 @@ import './components/Homepage';
 import './components/SimpleInput';
 import SimpleInput from './components/SimpleInput';
 import Homepage from './components/Homepage';
-import './components/Hamilton';
-import Hamilton  from "./components/Hamilton";
+import Hamilton from './components/Hamilton';
 import { Navbar } from "react-bootstrap";
 import Navbar1 from "./navbar/Navbar1";
+import Anxiety from "./components/Anxiety";
 
 function App() {
   return(
@@ -16,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<SimpleInput />} />
         <Route path="/homepage" element={<Homepage />} />
+        
+        <Route path="/Anxiety" element={<Anxiety />} />
         
         <Route path="/Hamilton" element={<Hamilton />} />
         <Route path="/navbar" element={<Navbar1 />} />

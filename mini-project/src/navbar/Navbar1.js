@@ -15,7 +15,7 @@ const Navbar1 = () => {
                             <a class="nav-link" href="#"><Link to="/Hamilton">Hamilton Test</Link><span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#"><Link to="/Hamilton">Anxiety Kit</Link><span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#"><Link to="/Anxiety">Anxiety Kit</Link><span class="sr-only">(current)</span></a>
                         </li>
                     
                     </ul>
