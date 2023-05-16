@@ -1,9 +1,13 @@
 import '../css/SI.css';
+import axios from 'axios';
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+
 
 
 const SimpleInput = (props) => {
+    const navigate = useNavigate();
     const [EnteredName, setEnteredName] = useState('');
     const [EnteredPwd, setEnteredPwd] = useState('');
     const InputChangeHandler = (event) => {
@@ -13,13 +17,21 @@ const SimpleInput = (props) => {
         setEnteredPwd(event.target.value);
     }
     const handleSubmit = (e) => {
+        
         e.preventDefault();
-        if (EnteredName.trim() == '') {
+        if (EnteredName.trim() === '') {
             alert("Username is empty! Enter valid username");
             return;
         }
-        console.log(EnteredName);
-        console.log(EnteredPwd)
+
+        axios.post('http://localhost:8000/api/login/',{'username':EnteredName,'password':EnteredPwd}).then(function (response) {
+            console.log(response.status);
+            if (response.status === 200){
+                navigate('/homepage');
+            }
+          })
+
+
     };
 
 
@@ -33,7 +45,7 @@ const SimpleInput = (props) => {
                         <input type="text" placeholder="Email or Phone" id="username" onChange={InputChangeHandler} />
                         <label className="password">Password</label>
                         <input type="password" placeholder="Password" id="password" onChange={IputChangeHandler} />
-                        <Link to="/homepage">click</Link>
+                        <button><Link to="/homepage">Login</Link></button>
                     </form>
                 </header>
             </div>

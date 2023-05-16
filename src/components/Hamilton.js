@@ -1,7 +1,40 @@
 import Navbar1 from '../navbar/Navbar1';
-import EX from './EX';
+import {EX, selection} from './EX';
 import '../css/Hamilton.css';
-import submitans from './submitans';
+import axios from 'axios';
+import Submitans from './submitans';
+
+function handleSubmission(){
+    var values = [
+        "depressedMood",
+        "feelingsOfGuilt",
+        "suicide",
+        "initialInsomnia",
+        "insomniaDuringTheNight",
+        "delayedInsomnia",
+        "workAndInterests",
+        "retardation",
+        "agitation",
+        "psychiatricAnxiety",
+        "somaticAnxiety",
+        "gastrointestinalSomaticSymptoms",
+        "generalSomaticSymptoms",
+        "hypochondriasis",
+        "weightLoss",
+        "insight"]
+    var counter = 1;
+    var toSubmit = {}
+    values.forEach((value)=>{toSubmit[value] = selection[counter++]})
+
+    axios.post("http://localhost:8000/api/questionare/",toSubmit).then(
+        (response)=>{
+            console.log(response)
+        }
+    )
+    
+}
+
+
 
 const Hamilton = () => {
     const qs = [{
@@ -145,6 +178,50 @@ const Hamilton = () => {
 
     }
     ];
+
+    
+
+    function renderSlides(i){
+
+            let element = qs[i];
+          
+            return(<div className="carousel-item">
+
+                <EX
+                    qn={element.qn}
+                    o1={element.o1}
+                    o2={element.o2}
+                    o3={element.o3}
+                    o4={element.o4}
+                    o5={element.o5}
+                />
+            </div>
+            )
+        }   
+        
+    const questions = [];
+    questions.push(
+    <div className="carousel-item active">
+    <EX
+        qn={qs[0].qn}
+        o1={qs[0].o1}
+        o2={qs[0].o2}
+        o3={qs[0].o3}
+        o4={qs[0].o4}
+        o5={qs[0].o5}
+        /></div>);
+    for (let i = 1; i < qs.length; i++) {
+        questions.push(renderSlides(i));
+      }
+      questions.push(
+      <div className="carousel-item middle">
+        <div style={{height:"40px"}}></div>
+        <div><h1 id="hamiltonScore"></h1></div>
+        <div><h2 id="hamiltonResult"></h2></div>
+        <button style={{width:"50%"}} onClick={handleSubmission}>Submit</button>
+      </div>);
+  
+    
     return (
         <div className="Apps">
 
@@ -153,63 +230,11 @@ const Hamilton = () => {
                 <div className='ham-car'>
                     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-interval="false">
                         <div class="carousel-inner" >
-                            <div class="carousel-item active">
-                                <EX
-                                    qn={qs[0].qn}
-                                    o1={qs[0].o1}
-                                    o2={qs[0].o2}
-                                    o3={qs[1].o3}
-                                    o4={qs[1].o4}
-                                    o5={qs[1].o5}
-
-                                />
+                            {questions}
+                            <div className="carousel-item">
+                                <Submitans />
                             </div>
-
-                            <div class="carousel-item ">
-                                <EX
-                                    qn={qs[1].qn}
-                                    o1={qs[1].o1}
-                                    o2={qs[1].o2}
-                                    o3={qs[1].o3}
-                                    o4={qs[1].o4}
-                                    o5={qs[1].o5}
-                                />
-                            </div>
-                            <div class="carousel-item ">
-
-                                <EX
-                                    qn={qs[2].qn}
-                                    o1={qs[2].o1}
-                                    o2={qs[2].o2}
-                                    o3={qs[2].o3}
-                                    o4={qs[2].o4}
-                                    o5={qs[2].o5}
-                                />
-                            </div>
-                            <div class="carousel-item ">
-
-                                <EX
-                                    qn={qs[3].qn}
-                                    o1={qs[3].o1}
-                                    o2={qs[3].o2}
-                                    o3={qs[3].o3}
-
-                                />
-                            </div>
-                            <div class="carousel-item ">
-
-                                <EX
-                                    qn={qs[17].qn}
-                                    o1={qs[17].o1}
-                                    o2={qs[17].o2}
-                                    o3={qs[17].o3}
-                                    o4={qs[17].o4}
-                                />
-                            </div>
-                            <div class="carousel-item">
-                                <submitans />
-                            </div>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </header>
